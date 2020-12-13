@@ -1,4 +1,12 @@
+#  CS 484 - Project 2
+#  Makefile
+#  Jesus Barba, David de la Rosa, Devin Thaker
+
+
 CC = gcc
+
+# client executable is called "client"
+# server executable is called "server"
 
 all: client server
 
