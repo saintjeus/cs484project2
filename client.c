@@ -20,7 +20,7 @@ int main() {
     int sockfd; 
     char buffer[MAXLINE]; 
     char *hello = "Hello from client";
-    char *buffer2[MAXLINE]; //second buffer, size set to 1024 
+    char buffer2[MAXLINE]; //second buffer, size set to 1024 
     struct sockaddr_in     servaddr; 
   
     // Creating socket file descriptor 
@@ -42,8 +42,8 @@ int main() {
     // loop here to get input, send to server, and receive from server
     while(1)
     {
-    printf("\nClient: :");
-    gets(buffer2);  
+    printf("\nClient: ");
+    scanf("%s", buffer2);
     sendto(sockfd, (char *)buffer2, strlen(buffer2), 
         MSG_CONFIRM, (const struct sockaddr *) &servaddr,  
             sizeof(servaddr)); 
